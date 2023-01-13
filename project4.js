@@ -13,5 +13,15 @@ function additems(e) {
   obj.personEmail = email.value;
   let newobj = JSON.stringify(obj);
   localStorage.setItem(newobj, newobj);
-  console.log(newobj)
+  // console.log(newobj)
+
+  let items = document.getElementById('items');
+  let newitem = Name.value + email.value;
+  let li = document.createElement('li');
+  li.className = 'list-group-item';
+  li.appendChild(document.createTextNode(newitem));
+  items.appendChild(li);
+
+
 }
+
